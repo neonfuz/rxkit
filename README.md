@@ -1,3 +1,9 @@
+# SvelteKit-RxDB-minimal
+
+This is the default SvelteKit skeleton project with minimal changes to get RxDB working. For a more developed base combining the two see [RxKit](https://github.com/neonfuz/rxkit). 
+
+Below is the original SvelteKit readme:
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
