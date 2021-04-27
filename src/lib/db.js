@@ -13,6 +13,8 @@ export const useDb = fn => (
         } = await import('rxdb');
         // RxDB Plugins
         addRxPlugin(await import('pouchdb-adapter-idb'));
+//        addRxPlugin(await import('rxdb-utils/dist/observables'));
+//        addRxPlugin(await import('rxdb-utils/dist/hooks'));
         // Create DB
         const db = await createRxDatabase({
             name: 'rxkit',
