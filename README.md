@@ -1,36 +1,24 @@
-# SvelteKit-RxDB-minimal
+# RxKit
 
-This is the default SvelteKit skeleton project with minimal changes to get RxDB working. For a more developed base combining the two see [RxKit](https://github.com/neonfuz/rxkit). 
+RxDB + SvelteKit
 
-Below is the original SvelteKit readme:
+The purpose of this repo is to create a base based on SvelteKit to explore how to best interface RxDB with Svelte. It is the continuation of [RxSapper](https://github.com/neonfuz/rxsapper). Feedback is welcome! The goal is to eventually build a stable base but it is not yet "production ready".
 
-# create-svelte
+# Create a project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+``` bash
+npx degit neonfuz/rxkit project_name
+cd project_name
+yarn
 ```
-
-> Note: the `@next` is temporary
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```bash
-npm run dev
+yarn dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev -- --open
 ```
 
 ## Building
