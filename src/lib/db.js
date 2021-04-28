@@ -27,3 +27,17 @@ export const useDb = fn => (
         return await fn(db);
     })
 );
+
+export const handleChange = item => e => {
+    let value = e.target.value;
+    switch (e.target.type) {
+        case 'number': value = Number(value); break;
+        case 'checkbox': value = e.target.checked; break;
+    }
+    item.atomicPatch({ [e.target.name]: value })
+}
+
+export const handleRemove = item => e => {
+    e.preventDefault();
+    return item.remove();
+}
