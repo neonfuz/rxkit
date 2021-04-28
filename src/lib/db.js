@@ -1,4 +1,5 @@
 import {onMount} from 'svelte';
+import models from '../models/';
 
 export const useDb = fn => (
     // Browser only
@@ -20,6 +21,8 @@ export const useDb = fn => (
             name: 'rxkit',
             adapter: 'idb',
         });
+        // Register models
+        await db.addCollections(await models());
         // execute fn with db
         return await fn(db);
     })
