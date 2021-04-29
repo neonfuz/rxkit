@@ -1,8 +1,10 @@
 {
-  "name": "~TODO~",
+  "name": "rxkit",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "npm run dev:db & npm run dev:ui",
+    "dev:ui": "svelte-kit dev",
+    "dev:db": "mkdir -p .svelte/db; cd .svelte/db; pouchdb-server --dir . -o 0.0.0.0",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview"
   },
@@ -10,6 +12,7 @@
     "@sveltejs/kit": "next",
     "events": "^3.3.0",
     "pouchdb-adapter-idb": "^7.2.2",
+    "pouchdb-server": "^4.2.0",
     "rxdb": "^9.17.1",
     "rxdb-utils": "^2.0.0-beta.2",
     "rxjs": "^6.6.7",

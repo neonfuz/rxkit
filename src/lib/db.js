@@ -1,5 +1,6 @@
 import {onMount} from 'svelte';
 import models from '../models/';
+import cfg from '../../package.json';
 
 const createDb = async () => {
     // Node shims needed for pouchdb
@@ -13,11 +14,18 @@ const createDb = async () => {
     addRxPlugin(await import('rxdb-utils/dist/hooks'));
     // Create DB
     const db = await createRxDatabase({
-        name: 'rxkit',
+        name: cfg.name,
         adapter: 'idb',
     });
     // Register models
-    await db.addCollections(await models());
+    const collections = await models();
+    await db.addCollections(collections);
+    // Sync
+    const syncURL=`http://${window.location.hostname}:5984/`
+    Object.keys(collections).forEach(name => db[name].sync({
+        remote: syncURL + name + '/'
+    }));
+
     return db;
 }
 
