@@ -1,5 +1,7 @@
 # RxKit
 
+![banner4](https://user-images.githubusercontent.com/11461551/116823415-05e8bb00-ab4a-11eb-8512-545c24ac8795.png)
+
 RxDB + SvelteKit
 
 The purpose of this repo is to create a base based on SvelteKit to explore how to best interface RxDB with Svelte. It is the continuation of [RxSapper](https://github.com/neonfuz/rxsapper). Feedback is welcome! The goal is to eventually build a stable base but it is not yet "production ready".
