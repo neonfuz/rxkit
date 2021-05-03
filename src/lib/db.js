@@ -10,6 +10,7 @@ const createDb = async () => {
     const { createRxDatabase, addRxPlugin } = await import('rxdb');
     // Add plugins
     addRxPlugin(await import('pouchdb-adapter-idb'));
+    addRxPlugin(await import('pouchdb-adapter-http'));
     addRxPlugin(await import('rxdb-utils/dist/observables'));
     addRxPlugin(await import('rxdb-utils/dist/hooks'));
     // Create DB
