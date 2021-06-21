@@ -9,16 +9,16 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@sveltejs/kit": "^1.0.0-next.94",
+    "@sveltejs/kit": "1.0.0-next.1",
     "events": "^3.3.0",
     "npm-run-all": "^4.1.5",
     "pouchdb-adapter-http": "^7.2.2",
     "pouchdb-adapter-idb": "^7.2.2",
     "pouchdb-server": "^4.2.0",
     "rxdb": "^9.18.0",
-    "rxjs": "^6.6.7",
+    "rxjs": "^7.1.0",
     "svelte": "^3.38.1",
-    "vite": "^2.1.0"
+    "vite": "^2.3.8"
   },
   "type": "module"
 }
